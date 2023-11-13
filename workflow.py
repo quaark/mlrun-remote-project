@@ -10,7 +10,6 @@ def pipeline(model_name="cancer-classifier"):
         "data-prep",
         name="get-data",
         outputs=["dataset"],
-        image="mlrun/mlrun:1.5.0",
     )
 
     # Train a model using the auto_trainer hub function
@@ -25,7 +24,6 @@ def pipeline(model_name="cancer-classifier"):
         }, 
         handler='train',
         outputs=["model"],
-        image="mlrun/mlrun:1.5.0",
     )
 
     # Deploy the trained model as a serverless function
