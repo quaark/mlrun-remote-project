@@ -1,0 +1,23 @@
+kind: project
+metadata:
+  name: tutorial-admin
+  created: '2023-11-13T09:56:24.517000'
+spec:
+  functions:
+  - url: data-prep.py
+    name: data-prep
+    kind: job
+    image: mlrun/mlrun
+    handler: breast_cancer_generator
+  workflows: []
+  artifacts: []
+  conda: ''
+  source: ''
+  desired_state: online
+  owner: admin
+  build:
+    commands: []
+    requirements: []
+  custom_packagers: []
+status:
+  state: online
